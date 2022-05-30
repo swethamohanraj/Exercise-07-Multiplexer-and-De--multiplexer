@@ -52,22 +52,46 @@ If the control input changes to AB = 10, then all the gates are restricted excep
 
 
 ### PROGRAM 
-/*
+```
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
+Developed by:K.M.SWETHA 
+RegisterNumber:212221240055
 
+Multiplexer:
+module mux(I0,I1,I2,I3,S0,S1,Y);
+input I0,I1,I2,I3,S0,S1;
+output Y;
+wire S0C,S1C;
+not(S0C,S0);
+not(S1C,S1);
+wire P,Q,R,S;
+and(P,S0C,S1C,I0);
+and(Q,S0C,S1,I1);
+and(R,S0,S1C,I2);
+and(S,S0,S1,I3);
+or(Y,P,Q,R,S);
+endmodule
 
-
-
-
+De-Multiplexer:
+module demux(Y0,Y1,Y2,Y3,S0,S1,I);
+input S0,S1,I;
+output Y0,Y1,Y2,Y3;
+wire S0C,S1C;
+not(S0C,S0);
+not(S1C,S1);
+and(Y0,I,S0C,S1C);
+and(Y1,I,S0C,S1);
+and(Y2,I,S0,S1C);
+and(Y3,I,S0,S1);
+endmodule
+```
 
 ### RTL LOGIC  
+### Multiplexer:
+![image](https://user-images.githubusercontent.com/94228215/170914587-2ca3c6ae-1acd-4268-b105-7cd193c00ed9.png)
 
-
-
-
+### DE-Multiplexer:
+![image](https://user-images.githubusercontent.com/94228215/170914570-7f73cc49-bc05-4ffd-a6c9-09cf57d6bcdf.png)
 
 
 

@@ -47,12 +47,14 @@ If the control input changes to AB = 10, then all the gates are restricted excep
  
  
 ### Procedure
-/* Start the module using module projname().
-Declare the inputs and outputs along with the select lines according to the multiplexer and demultiplexer.
-Use wire to assign intermediate outputs.
-Use and,or and not gates to get the desired output.
-End the module.
-Generate RTL realization and timing diagrams*/
+```
+1.Start the module using module projname().
+2.Declare the inputs and outputs along with the select lines according to the multiplexer and demultiplexer.
+3.Use wire to assign intermediate outputs.
+4.Use and,or and not gates to get the desired output.
+5.End the module.
+6.Generate RTL realization and timing diagrams
+```
 
 
 
